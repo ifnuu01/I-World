@@ -27,6 +27,11 @@ export interface Country {
       symbol: string
     }
   }
+  continents?: string[];
+  maps?: {
+    googleMaps: string
+    openStreetMaps: string
+  }
   languages?: {
     [key: string]: string
   }
