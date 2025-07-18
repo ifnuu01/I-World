@@ -52,10 +52,7 @@ function About() {
 
             <h1 className="text-3xl font-bold mb-4 mt-4 text-main-light">GitHub Repository</h1>
             <p className="mb-4">
-                You can find the source code for this project on GitHub :
-                <a href="https://github.com/ifnuu01/I-World" target="_blank" rel="noopener noreferrer" className="text-main-light hover:underline">
-                    GitHub Repository
-                </a>
+                You can find the source code for this project on GitHub : <a href="https://github.com/ifnuu01/I-World" target="_blank" rel="noopener noreferrer" className="text-main-light hover:underline">GitHub Repository</a>
             </p>
         </div>
     )
