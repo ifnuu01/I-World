@@ -50,7 +50,7 @@ function Home() {
     };
 
     return (
-        <div className="">
+        <div>
             <SearchAndFilter
                 onSearch={handleSearch}
                 onRegionFilter={handleRegionFilter}
@@ -79,7 +79,7 @@ function Home() {
             {!isLoading && countries && countries.length > 0 && (
                 <>
                     <p className="mb-4">Showing {countries.length} countries</p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 md:gap-16 w-full">
+                    <div className="flex flex-wrap justify-between">
                         {countries.map((country) => (
                             <Card key={country.cca3} country={country} />
                         ))}

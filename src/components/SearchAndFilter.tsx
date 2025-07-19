@@ -56,7 +56,7 @@ function SearchAndFilter({ onSearch, onRegionFilter, onClearFilters, isLoading }
                 <div className="relative text-white w-full">
                     <Icon icon="mdi:search" className='absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400' width={20} height={20} />
                     <Input
-                        placeholder="Search by country name..."
+                        placeholder="Search countries..."
                         className="pl-10 text-white bg-transparent border-gray-600 focus:border-main-light"
                         onChange={(e) => setSearchQuery(e.target.value)}
                         value={searchQuery}
@@ -68,13 +68,13 @@ function SearchAndFilter({ onSearch, onRegionFilter, onClearFilters, isLoading }
                     className="bg-main-dark hover:bg-main-light whitespace-nowrap"
                     disabled={isLoading}
                 >
-                    <Icon icon="mdi:search" width={20} height={20} />
-                    {isLoading ? 'Searching...' : 'Search'}
+
+                    {isLoading ? <Icon icon="mdi:loading" width={20} height={20} /> : <Icon icon="mdi:search" width={20} height={20} />}
                 </Button>
             </form>
 
             <div className="flex gap-4 items-center">
-                <div className="w-48">
+                <div className="w-full">
                     <Select value={selectedRegion} onValueChange={handleRegionChange}>
                         <SelectTrigger className="w-full text-white bg-transparent border-gray-600 focus:border-main-light">
                             <SelectValue placeholder="Filter by Region" />
